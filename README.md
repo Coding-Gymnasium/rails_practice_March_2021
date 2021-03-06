@@ -11,3 +11,9 @@
 **Notes:**
 <b>Please work on this repo, committing your work. When complete please zip the repo back up and email it to jwindholtz@everfi.com</b>
 <b>Preferrably try to complete this within 7 days of receipt.  Please don't spend more then 2 hours on this take home project.
+
+## My Notes:
+
+- [ ] Create a student transfer page that will transfer one student from one school to another.
+- [ ] If the student has an enrollment display a message letting the user know the student cannot be moved because he or she has an active enrollment.
+- [ ] Fix tests that are currently erroring
