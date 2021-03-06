@@ -1,6 +1,6 @@
 class Teacher < ApplicationRecord
   belongs_to :school
-  has_many :cohorts
+  has_many :cohorts, dependent: :destroy
   has_many :students, through: :enrollments
 
   def full_name
