@@ -49,3 +49,8 @@ Student 'Mary Eligible' is enrolled at school "Test School" and she doesn't have
 			- Creates an enrollment in the new school (if eligible)
 			- redirects to student show page if student eligible. Student can see new enrollment		
 			- flash message error and re-renders page if student is not eligible. Student can see new enrollment		
+
+Enrrollment create params:
+
+pry(#<EnrollmentsController>)> params
+=> <ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"tpRVKWZT78jDn0hqM6g29BAlbjra4Mc2I18fdeHGyKMo/FQ/ne5b5l2bo2J6/MHKf5xWuihaSUyJNHOtoSQjsA==", "enrollment"=>{"school_id"=>"1", "student_id"=>"5", "cohort_id"=>"1", "start_date(1i)"=>"2021", "start_date(2i)"=>"3", "start_date(3i)"=>"7", "end_date(1i)"=>"2021", "end_date(2i)"=>"3", "end_date(3i)"=>"7"}, "commit"=>"Create Enrollment", "controller"=>"enrollments", "action"=>"create", "school_id"=>"1"} permitted: false
