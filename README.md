@@ -21,14 +21,17 @@
 Plan:
 Create a transfer object that belongs to both student and schools
 
-The object has:
-from_school (school_id)
-to_school (school_id)
-student (student_id)
-eligible (boolean)
+The object relationships:
+belongs to school (destination school id)
+belongs to student (student id)
 
+Routes:
+	students/id/transfers/new
+	students/id/transfers/create
+	students/id/transfers
+	
 Story
-Student 'John Noneligeble', is enrolled at school "Test School" and has an active enrollment.
+Student 'John Not-eligible', is enrolled at school "Test School" and has an active enrollment.
 Student 'Mary Eligible' is enrolled at school "Test School" and she doesn't have active enrollments.
 
 1. A student goes to her show page where she finds link labelled "Transfer to a new school"
@@ -43,5 +46,6 @@ Student 'Mary Eligible' is enrolled at school "Test School" and she doesn't have
 		- End date
 		- Submit 
 	1.c. Clicking submit 
+			- Creates an enrollment in the new school (if eligible)
 			- redirects to student show page if student eligible. Student can see new enrollment		
-			- flash message error and rerenders page if student is not eligible. Student can see new enrollment		
+			- flash message error and re-renders page if student is not eligible. Student can see new enrollment		
