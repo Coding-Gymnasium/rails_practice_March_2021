@@ -17,3 +17,31 @@
 - [ ] Create a student transfer page that will transfer one student from one school to another.
 - [ ] If the student has an enrollment display a message letting the user know the student cannot be moved because he or she has an active enrollment.
 - [ ] Fix tests that are currently erroring
+
+Plan:
+Create a transfer object that belongs to both student and schools
+
+The object has:
+from_school (school_id)
+to_school (school_id)
+student (student_id)
+eligible (boolean)
+
+Story
+Student 'John Noneligeble', is enrolled at school "Test School" and has an active enrollment.
+Student 'Mary Eligible' is enrolled at school "Test School" and she doesn't have active enrollments.
+
+1. A student goes to her show page where she finds link labelled "Transfer to a new school"
+	1.a. Clicking on the "Transfer..." link redirects to new view for transfer
+	1.b. Transfer new view has a form that includes:
+		- Name
+		- School of origin
+		- Eligible to transfer?
+		- Destination school
+		- Cohort
+		- Start date
+		- End date
+		- Submit 
+	1.c. Clicking submit 
+			- redirects to student show page if student eligible. Student can see new enrollment		
+			- flash message error and rerenders page if student is not eligible. Student can see new enrollment		
