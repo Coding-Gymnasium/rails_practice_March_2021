@@ -8,6 +8,9 @@ class SchoolsController < ApplicationController
 
   # GET /schools/1 or /schools/1.json
   def show
+    coordinates = MapService.get_coordinates(@school.location)
+    @map = MapService.get_map(coordinates)
+    #@map = "https://www.mapquestapi.com/staticmap/v5/map?key=#{ENV["MAP_API_KEY"]}&locations=#{coordinates[:lat]},#{coordinates[:lng]}"
   end
 
   # GET /schools/new

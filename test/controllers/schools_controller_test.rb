@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SchoolsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @school = schools(:one)
+    @school = School.create!(description: "Weightlifting school", location: "8200 E.Pacific place suite 110, Denver, CO 80231", name: "Colorado Weightlifting club")
   end
 
   test "should get index" do

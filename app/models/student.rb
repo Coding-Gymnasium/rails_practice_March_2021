@@ -1,6 +1,7 @@
 class Student < ApplicationRecord
   belongs_to :school
-  has_many :enrollments
+  has_many :enrollments, dependent: :destroy
+  has_many :transfers, dependent: :destroy
   has_many :cohorts, through: :enrollments
 
   def full_name

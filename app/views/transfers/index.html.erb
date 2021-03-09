@@ -1,0 +1,7 @@
+<h1> Transfers </h1>
+
+<% @transfers.each do |transfer| %>
+  <ul>
+    <li><h3> <%= link_to Student.find(transfer.student_id).full_name, transfer_path(transfer.id) %></h3> </li>
+  </ul>
+<% end %>
